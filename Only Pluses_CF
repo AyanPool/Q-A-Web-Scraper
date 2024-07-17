@@ -1,0 +1,56 @@
+///////Method1
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+#ifdef LOCAL
+#include "algo/debug.h"
+#else
+#define debug(...) 42
+#endif
+ 
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(0);
+  int tt;
+  cin >> tt;
+  while (tt--) {
+    vector<int> a(3);
+    cin >> a[0] >> a[1] >> a[2];
+    for (int i = 0; i < 5; i++) {
+      sort(a.begin(), a.end());
+      a[0] += 1;
+    }
+    cout << a[0] * a[1] * a[2] << '\n';
+  }
+  return 0;
+}
+
+/////Method 2 
+void solve(){
+  ll a, b, c;
+  cin>>a>>b>>c;
+  ll maxi = a*b*c;
+    
+    for (int i = 0; i <= 5; ++i) {
+        for (int j = 0; j <= 5 - i; ++j) {
+            int k = 5 - i - j;
+            ll new_a = a + i;
+            ll new_b = b + j;
+            ll new_c = c + k;
+            maxi = max(maxi, new_a * new_b * new_c);
+        }
+    }
+    
+    cout << maxi << endl;
+}
+ 
+int main() {
+  speedy();
+  ll t=1;
+  cin >> t;
+  while (t-- > 0) {
+    solve();
+  }
+  return 0;
+}
