@@ -1,0 +1,9 @@
+Flask==3.0.3
+nltk==3.8.1
+numpy==1.22.4
+Requests==2.32.3
+sentence_transformers==3.0.0
+transformers==4.40.1
+Wikipedia_API==0.6.0
+google-generativeai
+google.generativeai
