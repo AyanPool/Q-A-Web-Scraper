@@ -2,7 +2,7 @@
 
 A powerful web scraping and question-answering system that extracts content from Wikipedia pages and provides accurate answers to user queries using semantic similarity and the Gemini API.
 
-## 🚀 Features
+## Features
 
 - Wikipedia content extraction and processing
 - Intelligent text chunking for better context management
@@ -11,7 +11,7 @@ A powerful web scraping and question-answering system that extracts content from
 - RESTful API endpoint using Flask
 - Easy-to-use Postman interface
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - Python 3.x
 - Flask (Web Framework)
@@ -22,61 +22,14 @@ A powerful web scraping and question-answering system that extracts content from
 - Conda (Environment Management)
 - Postman (API Testing)
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Python 3.x installed
 - Conda package manager
 - Postman (for API testing)
 - Google AI Studio API key for Gemini
 
-## 🚀 Installation
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd webscraper_assignment
-```
-
-2. Create and activate Conda environment:
-```bash
-conda create --name webScraper
-conda activate webScraper
-```
-
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-## 💻 Usage
-
-1. Start the Flask server:
-```bash
-python webscraper.py
-```
-
-2. The server will start and display a local URL (typically `http://127.0.0.1:5000`)
-
-3. Using Postman:
-   - Set HTTP method to POST
-   - Enter the URL shown in the terminal
-   - Set request body to raw JSON
-   - Format your query as:
-   ```json
-   {
-       "query": "Your question here"
-   }
-   ```
-   - Click Send to get the response
-
-4. To stop the server, press `Ctrl+C` in the terminal
-
-5. Deactivate the Conda environment when done:
-```bash
-conda deactivate
-```
-
-## 🔧 How It Works
+## How It Works
 
 ### 1. Web Scraping and Content Processing
 - Extracts content from Wikipedia pages using the Wikipedia API
@@ -98,35 +51,14 @@ conda deactivate
 - Accepts POST requests with JSON queries
 - Returns responses in JSON format
 
-## 📝 API Documentation
-
-### Endpoint
-```
-POST /answer
-```
-
-### Request Format
-```json
-{
-    "query": "Your question here"
-}
-```
-
-### Response Format
-```json
-{
-    "answer": "Generated answer based on Wikipedia content"
-}
-```
-
-## ⚠️ Limitations
+## Limitations
 
 - Queries must be relevant to the Wikipedia page content
 - Large Wikipedia pages may require more processing time
 - API rate limits may apply for Wikipedia and Gemini API
 - Single-threaded processing (not optimized for concurrent queries)
 
-## 🔍 Technical Details
+## Technical Details
 
 ### Key Components
 
@@ -148,20 +80,4 @@ POST /answer
 4. **Query Processing**
    - Gemini API integration
    - Context-aware answer generation
-   - JSON response formatting
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Wikipedia API for content access
-- Google AI Studio for Gemini API
-- Sentence Transformers library
-- Flask framework
-- NLTK library 
+   - JSON response formatting 
